@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bambu-local"
+version = "0.1.0"
+description = "Read a Bambu Lab printer's report, send it commands and put files on it, over the LAN with no cloud and no dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Konstantinos Georgiou" }]
+dependencies = []
+keywords = ["bambu", "bambu-lab", "3d-printing", "mqtt", "ftps", "lan"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Printing"]
+
+[project.urls]
+Homepage = "https://github.com/drkostas/bambu.local"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bambu_local = ["skill/SKILL.md"]
